@@ -41,14 +41,14 @@ public class BaseStat : MonoBehaviour {
     }
 #endregion
 
-    private int calculateExpToLevel()
+    private float calculateExpToLevel()
     {
         return _expToLevel * _levelModifier;
     }
 
     public void LevelUp()
     {
-        _expToLevel = calculateExpToLevel();
+        _expToLevel = (int)calculateExpToLevel();
         _baseValue++;
     }
 
