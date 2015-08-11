@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Character Classes\Attribute.cs" />
+     <Compile Include="Assets\Scripts\Character Classes\BaseCharacter.cs" />
      <Compile Include="Assets\Scripts\Character Classes\BaseStat.cs" />
      <Compile Include="Assets\Scripts\Character Classes\ModifiedStat.cs" />
+     <Compile Include="Assets\Scripts\Character Classes\Skill.cs" />
+     <Compile Include="Assets\Scripts\Character Classes\Vital.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />

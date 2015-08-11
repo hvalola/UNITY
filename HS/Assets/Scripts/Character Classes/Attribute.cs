@@ -13,7 +13,7 @@ public class Attribute : BaseStat
 
 public enum AttributeName
 {
-    Night,
+    Might,
     Constitution,
     Ninbleness,
     Speed,
