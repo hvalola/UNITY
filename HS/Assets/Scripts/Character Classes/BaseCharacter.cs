@@ -4,6 +4,7 @@ using System;
 
 public class BaseCharacter : MonoBehaviour 
 {
+    
     private string _name;
     private int _level;
     private uint _freeExp;
@@ -13,15 +14,16 @@ public class BaseCharacter : MonoBehaviour
     private Skill[] _skill;
 
 
-    void Awake()
+    public void Awake()
     {
+        
         _name = string.Empty;
         _level = 0;
         _freeExp = 0;
 
-        _primaryAttribute = new Attribute[Enum.GetValues(typeof(Attribute)).Length];
-        _vital = new Vital[Enum.GetValues(typeof(Vital)).Length];
-        _skill = new Skill[Enum.GetValues(typeof(Skill)).Length];
+        _primaryAttribute = new Attribute[Enum.GetValues(typeof(AttributeName)).Length];
+        _vital = new Vital[Enum.GetValues(typeof(VitalName)).Length];
+        _skill = new Skill[Enum.GetValues(typeof(SkillName)).Length];
 
         SetupPrimaryAttributes();
         SetupVitals();
@@ -84,6 +86,8 @@ public class BaseCharacter : MonoBehaviour
         {
             _vital[cnt] = new Vital();
         }
+        SetupVitalModifiers();
+
     }
 
     private void SetupSkills()
@@ -92,6 +96,7 @@ public class BaseCharacter : MonoBehaviour
         {
             _skill[cnt] = new Skill();
         }
+        SetupSkillModifiers();
     }
 
     public Attribute GetPrimaryAttribute(int index)
